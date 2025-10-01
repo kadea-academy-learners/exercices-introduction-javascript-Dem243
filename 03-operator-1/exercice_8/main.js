@@ -22,20 +22,43 @@ totalDepenses += loisirs;
 
 reste = salaireMensuel - totalDepenses
 
-let pourcentageSalMensuel = (loyer / salaireMensuel) * 100 + (nourriture / salaireMensuel) * 100 + (transport / salaireMensuel) * 100 + (autresDepenses / salaireMensuel) * 100 + (loisirs / salaireMensuel) * 100;
+/* Calculer le pourcentage du salaire mensuel utilisé pour chaque catégorie de dépense */
+let pourcentageLoyer = (loyer / salaireMensuel) * 100;
+let pourcentageNourriture = (nourriture / salaireMensuel) * 100;
+let pourcentageTransport = (transport / salaireMensuel) * 100;
+let pourcentageAutresDepenses = (autresDepenses / salaireMensuel) * 100;
+let pourcentageLoisirs = (loisirs / salaireMensuel) * 100;
 
+console.log(`Calcul pourcentage: Loyer = ${pourcentageLoyer}%, Nourriture  = ${pourcentageNourriture}%, Transport = ${pourcentageTransport}%, Autres Dépenses  = ${pourcentageAutresDepenses}%, Loisirs = ${pourcentageLoisirs}%    `);
+/* Simuler une augmentation de 10% du `salaireMensuel` */
 salaireMensuel += (salaireMensuel * 10) / 100;
 
+/* recalculer toutes les valeurs */
 loyer = (salaireMensuel * 30) / 100;
 nourriture = (salaireMensuel * 20) / 100;
 transport = (salaireMensuel * 10) / 100;
-loisirs = (salaireMensuel * 15) / 100
+loisirs = (salaireMensuel * 15) / 100;
 
-totalDepenses = loyer + nourriture + transport + autresDepenses +loisirs;
+totalDepenses = loyer + nourriture + transport + autresDepenses;
 
 reste = salaireMensuel - totalDepenses
 
-if (totalDepenses > (salaireMensuel * 40) / 100) {
+/* condition pour vérifier si les dépenses totales dépassent 90% du `salaireMensuel`*/
+
+if (totalDepenses > (salaireMensuel * 90) / 100) {
     console.log("Dépenses trop élevées, réduisez vos charges");
 }
 console.log(totalDepenses);
+
+module.exports = {
+
+    salaireMensuel,
+    loyer,
+    transport,
+    nourriture,
+    autresDepenses,
+    loisirs,
+    reste,
+    totalDepenses
+
+}

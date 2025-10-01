@@ -1,2 +1,3 @@
 //écrire votre code ici
-let kadea;
+let nom= "Kadea";
+console.log(nom);

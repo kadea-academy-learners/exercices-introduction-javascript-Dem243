@@ -1,4 +1,4 @@
 //écrire votre code ici
-// Ce programme affiche hello world
+// Ce programme affiche un message Hello World 
 
 

@@ -12,18 +12,37 @@ let partPremCat = patrimoine * 0.75;
 
 let partDeuxCategorie = patrimoine * 0.25;
 /* Calcul part première catégorie */
-let partPaul = partPremCat /  3;
-let partMarie = partPremCat /  3;
-let partAlain = partPremCat / 3;
+let paul = partPremCat /  3;
+let marie = partPremCat /  3;
+let alain = partPremCat / 3;
 
-let partEric = partAlain /  2;
-let partClaire = partAlain /  2;
+let eric = alain /  2;
+let clair = alain / 2;
 
 /* Calcul part deuxième catégorie */
 
-let partMadameMukuna = partDeuxCategorie / 3;
-let partJoseph = partDeuxCategorie  / 3;
-let partSarah = partDeuxCategorie  / 3;
+let madameMukuna = partDeuxCategorie / 3;
+let joseph = partDeuxCategorie  / 3;
+let sarah = partDeuxCategorie  / 3;
 
 
-console.log(`Paul aura comme part: ${partPaul}, Marie aura comme part: ${partMarie}, Éric aura ${partEric}, Claire aura comme part: ${partClaire}, Madame Mukuna aura comme part; ${partMadameMukuna}, Joseph aura comme part: ${partJoseph}, sarah aura comme part; ${partSarah}, `);
+console.log(`Paul aura comme part: ${paul}, Marie aura comme part: ${marie}, Éric aura ${eric}, Clair aura comme part: ${clair}, Madame Mukuna aura comme part; ${madameMukuna}, Joseph aura comme part: ${joseph}, sarah aura comme part; ${sarah}, `);
+
+module.exports= {
+maison,
+terrain,
+liquidites,
+patrimoine,
+joseph,
+partDeuxCategorie,
+partPremCat,
+paul,
+clair,
+madameMukuna,
+sarah,
+alain,
+eric,
+marie
+
+
+}
